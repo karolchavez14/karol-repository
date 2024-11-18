@@ -1,5 +1,5 @@
 def displayMenu():
-print
+    print("This is the start of the menu")
 
 
 
@@ -10,7 +10,7 @@ def addNumbers( firtsNumber, secondNumber):
 
 def subtractNumbers( firtsNumber, secondNumber):
     subtract = firtsNumber - secondNumber
-    print( "The difference of" + firtsNumber + "and" + secondNumber + "is" + difference )
+    print( "The difference of" + firtsNumber + "and" + secondNumber + "is" + subtract )
 
 def multiplyNumbers( firtsNumber, secondNumber):
     product = firtsNumber * secondNumber
@@ -26,6 +26,10 @@ def main(): #this is the main program
     #1. Let's display the menu to the user
     # displayMenu()
     userOption = int ( input( "Please select an option") )
+
+    userFirstNumber = int ( input( "First Number") )
+    userSecondNumber = int ( input( "First Number") )
+
     
     if userOption == 1:
         addNumbers(userFirstNumber, userSecondNumber)
