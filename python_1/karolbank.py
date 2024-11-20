@@ -4,6 +4,11 @@ nickname = "nicole"
 age = 16
 bank_balance = 0.03 #Balance in dollars.
 
+bankInformation = [ "Karol", "nicole", "16", "0.03" ]
+
+for eachBankInfo in bankInformation:
+    print( eachBankInfo )
+
 #Display the information
 def display_info():
     print("User Information:")
