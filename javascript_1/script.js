@@ -12,11 +12,13 @@ else{
 console.log("My age is", age)
 
 let Myheading = document.getElementById("My heading");
-Myheading.textContent = " I have put text on the page with JavaScript";
+Myheading.textContent = " chemistry basics ;)";
 
 let num1 = 5;
 let num2 = 3;
 let sum = num1 + num2;  // Performing addition
 
 console.log("The result of the addition is: " + sum);
+
+
 
