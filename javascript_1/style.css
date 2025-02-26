@@ -29,6 +29,7 @@ header {
     padding: 10px;
     border-radius: 8px;
     font-family: 'Georgia', serif;
+    
 }
 
 h1 {
@@ -62,4 +63,8 @@ footer {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     text-align: left;
+}
+#chem{
+    height: auto;
+    width: 500px;
 }
