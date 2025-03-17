@@ -1,40 +1,55 @@
-body{
-    background-color:#ffffff(155, 207, 182, 0.738);
-    color:rgb(0, 2, 3);
+body {
+    background-color: #ffffff; /* Corregido: El valor anterior no es válido */
+    color: rgb(0, 2, 3);
     text-align: center;
     line-height: 1.5;
     padding: 20px 50px 50px 50px;
     font-size: 1rem;
-    font-family:'Lucida handwriting',serif;
-    margin: 50px; 
+    font-family: 'Lucida handwriting', serif;
+    margin: 50px;
 }
-img{
-    width:70%;
-    height: auto; 
-    display: block; 
-    margin: 50px auto;
-}
-nav{
-    text-align: center;
-    background-color: hsl(291, 30%, 83%);
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1rem;
-    word-spacing: 20px;
-    z-index: 1000;         /* Asegura que el nav quede por encima de otros elementos */
-    margin: 0;             /* Elimina márgenes predeterminados */
-    padding-top: 10px; 
-}
+
 header {
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    font-family: 'Georgia', serif;
-    font-size: 30rem;
-    
+    background-color: hsl(291, 30%, 83%);
+    padding: 18px;
+    color: white;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra para distinguir el nav */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+
+}
+
+nav ul li a:hover {
+    background-color: hsl(291, 30%, 70%); /* Agrega un hover para los enlaces */
+}
+
+img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 50px auto;
 }
 
 h1 {
@@ -57,6 +72,7 @@ footer {
     margin-top: 30px;
     border-top: 2px solid #c57e7e;
 }
+
 .info-box {
     background-color: #ffffff;
     color: #333;
@@ -69,21 +85,55 @@ footer {
     font-size: 1rem;
     text-align: left;
 }
-#chem{
+
+#chem {
     height: auto;
     width: 500px;
 }
 
-.navbar1 { 
+/* Barra de navegación fija */
+.navbar1 {
     text-align: center;
-    background-color: transparent; 
+    background-color: transparent;
     padding: 10px;
     margin-bottom: 20px;
-    border-radius: 0;  
-    box-shadow: none;   /* Elimina la sombra */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
     word-spacing: 10px;
-    border-top: 2px solid hsl(291, 30%, 83%); /* Agrega una línea en la parte superior */
+    border-top: 2px solid hsl(291, 30%, 83%);
     border-bottom: 2px solid hsl(291, 30%, 83%);
+}
+
+/* Asegura que el contenido principal no se sobreponga al nav */
+section {
+    margin-top: 80px; /* Agrega espacio suficiente para que el contenido no quede tapado por el nav fijo */
+}
+
+.nav-body {
+    border-top: 1px solid #efd4ed;
+    border-bottom: 1px solid #efd4ed;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-body ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-body li {
+    margin-right: 20px;
+}
+
+.nav-body a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-body a:hover {
+    color: #000000;
 }
