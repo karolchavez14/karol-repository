@@ -11,8 +11,7 @@ else{
 }
 console.log("My age is", age)
 
-let Myheading = document.getElementById("My heading");
-Myheading.textContent = " Nicole's recipes";
+
 
 let num1 = 5;
 let num2 = 3;
