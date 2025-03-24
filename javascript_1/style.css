@@ -6,7 +6,8 @@ body {
     padding: 20px 50px 50px 50px;
     font-size: 1rem;
     font-family: 'Lucida handwriting', serif;
-    margin: 50px;
+    margin: 0; /* Elimina los márgenes del body */
+    padding: 0;
 }
 
 header {
@@ -46,16 +47,11 @@ nav ul li a:hover {
 }
 
 img {
+    text-align: center;
     width: 70%;
     height: auto;
     display: block;
     margin: 50px auto;
-}
-
-h1 {
-    font-size: 2rem;
-    color: #4a148c;
-    margin-bottom: 10px;
 }
 
 p {
@@ -137,3 +133,49 @@ section {
 .nav-body a:hover {
     color: #000000;
 }
+
+.submenu {
+    display: none; /* Ocultamos el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Aparece debajo del elemento principal */
+    left: 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    min-width: 200px;
+    z-index: 999; /* Asegura que el submenú quede por encima de otros elementos */
+}
+
+/* Aseguramos que las opciones del submenú estén en bloque */
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: hsl(291, 30%, 70%);
+}
+
+/* Mostrar el submenú al pasar el ratón */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.logomarca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 250px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0; /* Elimina cualquier margen alrededor de la imagen */
+    padding: 0;
+}
+
