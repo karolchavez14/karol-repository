@@ -19,5 +19,10 @@ let sum = num1 + num2;  // Performing addition
 
 console.log("The result of the addition is: " + sum);
 
+function toggleSearch() {
+    var form = document.getElementById('searchForm');
+    form.style.display = form.style.display === 'none' || form.style.display === '' ? 'block' : 'none';
+}
+
 
 
