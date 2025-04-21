@@ -210,3 +210,31 @@ nav ul li:hover .submenu {
 .search.show-form input {
     display: block;
 }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: hsl(291, 30%, 83%);
+
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu li a {
+    color: black;
+    padding: 8px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: hsl(291, 30%, 70%);
+}
