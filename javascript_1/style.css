@@ -238,3 +238,45 @@ nav ul li:hover .submenu {
 .submenu li a:hover {
     background-color: hsl(291, 30%, 70%);
 }
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: 100px auto; /* Centrado vertical con espacio por el header fijo */
+    font-family: Arial, sans-serif;
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .container .toggle {
+    text-align: center;
+    margin-top: 1rem;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }

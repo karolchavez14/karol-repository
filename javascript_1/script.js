@@ -25,4 +25,23 @@ function toggleSearch() {
 }
 
 
+let isSignUp = false;
 
+function toggleForm() {
+  isSignUp = !isSignUp;
+  document.getElementById('form-title').textContent = isSignUp ? 'Registrarse' : 'Iniciar Sesión';
+  document.querySelector('button').textContent = isSignUp ? 'Registrar' : 'Entrar';
+  document.querySelector('.toggle').textContent = isSignUp
+    ? '¿Ya tienes cuenta? Inicia sesión'
+    : '¿No tienes cuenta? Regístrate';
+}
+
+function handleSubmit() {
+  const user = document.getElementById('username').value;
+  const pass = document.getElementById('password').value;
+  if (isSignUp) {
+    alert(`Registrado como ${user}`);
+  } else {
+    alert(`Bienvenido ${user}`);
+  }
+}
