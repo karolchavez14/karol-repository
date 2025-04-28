@@ -29,11 +29,11 @@ let isSignUp = false;
 
 function toggleForm() {
   isSignUp = !isSignUp;
-  document.getElementById('form-title').textContent = isSignUp ? 'Registrarse' : 'Iniciar Sesión';
+  document.getElementById('form-title').textContent = isSignUp ? 'Sign Up' : 'Sign in';
   document.querySelector('button').textContent = isSignUp ? 'Registrar' : 'Entrar';
   document.querySelector('.toggle').textContent = isSignUp
-    ? '¿Ya tienes cuenta? Inicia sesión'
-    : '¿No tienes cuenta? Regístrate';
+    ? 'Already have an account? Sign in'
+    : 'Do not have an account? Sign Up';
 }
 
 function handleSubmit() {
@@ -42,6 +42,23 @@ function handleSubmit() {
   if (isSignUp) {
     alert(`Registrado como ${user}`);
   } else {
-    alert(`Bienvenido ${user}`);
+    alert(`Welcome ${user}`);
   }
+}
+if (isSignUp) {
+  auth.createUserWithEmailAndPassword(user, pass)
+    .then((userCredential) => {
+      alert('Registro exitoso. Bienvenido ' + userCredential.user.email);
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+} else {
+  auth.signInWithEmailAndPassword(user, pass)
+    .then((userCredential) => {
+      alert('Bienvenido ' + userCredential.user.email);
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
 }

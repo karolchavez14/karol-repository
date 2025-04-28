@@ -8,13 +8,32 @@
 </head>
 <body>
   <div class="container" id="form-container">
-    <h2 id="form-title">Iniciar Sesión</h2>
-    <input type="text" id="username" placeholder="Usuario" />
-    <input type="password" id="password" placeholder="Contraseña" />
-    <button onclick="handleSubmit()">Entrar</button>
-    <div class="toggle" onclick="toggleForm()">¿No tienes cuenta? Regístrate</div>
+    <h2 id="form-title">Sign in</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="handleSubmit()">sign in</button>
+    <div class="toggle" onclick="toggleForm()">Don't have an account? Sign up</div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Agrega esto en tu index.html, en el <head> o antes de </body> -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script>
+    // Configuración de tu app Firebase
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_PROJECT_ID.firebaseapp.com",
+      projectId: "TU_PROJECT_ID",
+      storageBucket: "TU_PROJECT_ID.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+  
+    // Inicializa Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+  </script>

@@ -1,27 +1,20 @@
+import { useState } from "react";
 import "./styles.css";
+import firebase from "../firebaseConfig";
+import { addDoc } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth;"
 
-export default function App() {
-    return(
-        <div className="App">
-            <h1>Hello CodeSandbox</h1>
-            <h2>Start editing to see some magic happen!</h2>
-        </div>
-    );
+export default function App() { 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [displayName, setDisplayName] = useState("");
+
+    const handleSignup = async () => {
+        const auth = getAuth ();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential)) => {
+
+            const user = userCredential.user;
+        })
+    }
 }
-
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-const firebaseConfig = {
-  // ...
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
-
