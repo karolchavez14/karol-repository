@@ -1,11 +1,9 @@
 import './App.css';
 import Auth from './components/auth'
-import Nav from './components/nav'
 
 function App() {
   return (
     <div className="App">
-      <Nav></Nav>
       <Auth></Auth>
     </div>
   );

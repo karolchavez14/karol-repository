@@ -1,7 +1,6 @@
 import {auth} from "../config/firebase";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import React, {useState} from "react";
-import '../css/auth.css'
 function Auth() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -37,22 +36,19 @@ async function logout() {
 
 
     return(
-      
-
-<div class="container" id="form-container">
-    <h2 id="form-title">Sign in</h2>
-    <input id="username" placeholder="Email.."
+        <div>
+            <input placeholder="Email.."
                 onChange={(e)   => setEmail (e.target.value)}
                 />
-  <input id="password" placeholder="password.."
+                
+            <input placeholder="password.."
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             />
+
             <button onClick={signUp}>Sign Up</button>
             <button onClick={signIn}>Sign In</button>
             <button onClick={signOut}>Sign Out</button>
-    <div class="toggle" onclick="toggleForm()">Don't have an account? Sign up</div>
-
         </div>
     )
 }
