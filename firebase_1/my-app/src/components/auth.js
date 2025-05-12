@@ -1,4 +1,4 @@
-import {auth} from "../config/firebase";
+import { auth } from "../config/firebase";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import React, {useState} from "react";
 import '../css/auth.css'
