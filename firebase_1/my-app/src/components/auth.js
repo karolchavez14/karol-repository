@@ -50,7 +50,7 @@ async function logout() {
             />
             <button onClick={signUp}>Sign Up</button>
             <button onClick={signIn}>Sign In</button>
-            <button onClick={signOut}>Sign Out</button>
+            <button onClick={logout}>Sign Out</button>
     <div class="toggle" onclick="toggleForm()">Don't have an account? Sign up</div>
 
         </div>
