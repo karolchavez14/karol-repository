@@ -289,4 +289,11 @@ nav ul li:hover .submenu {
   header {
     box-shadow: none !important;
   }
+
+  .card img {
+    width: 100%;         /* La imagen ocupa todo el ancho del contenedor */
+    height: 400px;       /* Altura fija para todas */
+    object-fit: cover;   /* Corta y ajusta la imagen para que llene el espacio sin deformarse */
+    border-radius: 0.25rem; /* Opcional: para que coincida con el borde redondeado de Bootstrap */
+  }
   
